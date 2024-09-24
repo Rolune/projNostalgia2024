@@ -8,30 +8,62 @@
 	<link rel="stylesheet" href="resource/css/main.css">
 </head>
 <body>
-	<header>
+	<header style="align-items: flex-start;">
 		<!-- dividing to put the open section under nav -->
-		<!-- this might work better as a grid -->
-		<div class="flex-fill">
-			<!-- main nav -->
-			<nav id="nav-area">
+		<nav id="nav-main" style="
+		flex: 1;
+		background-color: hsl(0 0 40% / 40%);">
+			<div id="nav-main-upper" style="
+			display: flex; 
+			justify-content: space-between;
+			background-color: hsl(0 0 50% / 25%);">
+				<!-- swap with img later -->
+				<div id="logo" style="
+				background-color: #94C5D9;
+				
+				background-image: url(resource/media/squi_logo-000.png);
+				background-position: 68% 70%;
+				background-repeat: no-repeat;
+				background-size: 85%;
+				border-radius: 50%;
+
+				box-sizing: border-box;
+				height: 40px; width: 40px;
+				border: 3px solid #1E4C5B;">
+				<!-- tmp colour picked on blender -->
+				</div>
+				<!-- extra links -->
+				<div style="
+				display: grid;
+				grid-template-columns: repeat(2 1fr);
+				gap: 5px 10px;
+				padding: 0 10px;
+				
+				background-color: hsl(0 0 40% / 40%);">
+					<p style="
+					grid-column: 1; grid-row: 1;
+					margin: auto 0;">contact</p>
+					<p style="
+					grid-column: 2/3; grid-row: 1;
+					margin: auto 0;">credit</p>
+				</div>
+			</div>
+			<div id="nav-main-bar" style="width: 100%; height: 60px;
+			background-color: hsl(0 60% 60% / 30%);"></div>
+		</nav>
+		<!-- <div class="flex-fill">
+			<nav>
 				<div class="dis-flex-sBetween" style="width: 100%; margin: auto;">
-					<!-- home page link + logo -->
 					<div style="background-color: blue; width: 40px; height: 40px; border-radius: 50%; margin: 10px;"></div>
-					<!-- important links -->
 					<div id="links-other">
-						<!-- btn 0 -->
 						<p style="grid-column: 1; grid-row: 1;">test stuff</p>
-						<!-- btn 1 -->
 						<p style="grid-column: 2/3; grid-row: 1;">oth test</p>
 					</div>
 				</div>
 				<div id="nav-bar" style="align-self: flex-end;">
-					<!-- grid -->
-					<!-- nav bar -->
 				</div>
 			</nav>
-			<!-- optional decorative area -->
-		</div>
+		</div> -->
 		<!-- "login" window -->
 		<section id="login-sect"></section>
 	</header>

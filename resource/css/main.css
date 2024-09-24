@@ -4,19 +4,8 @@
 	padding: 0;
 }
 
-/* major section */
-
 body {
 	background-color: lightgray;
-}
-
-header {
-	width: 100%;
-	display: flex;
-}
-
-main {
-	display: flex;
 }
 
 /* utility class */
@@ -24,7 +13,7 @@ main {
 	flex: 1;
 }
 
-.dis-flex-sBetween {
+.flex-sBetween {
 	display: flex;
 	justify-content: space-between;
 }
@@ -37,7 +26,25 @@ main {
 	background-color: hsl(0 0 40);
 }
 
-/* id */
+/* sections */
+
+/* header */
+header {
+	width: 100%;
+	display: flex;
+}
+
+/* main nav */
+
+/* login */
+
+/* !!header!! */
+
+main {
+	display: flex;
+}
+
+/* id planned for removal */
 
 #nav-area {
 	width: 100%;
@@ -64,10 +71,10 @@ main {
 }
 
 #links-other {
-	display: grid;
+	/* display: grid;
 	grid-template-columns: repeat(2 1fr);
 	gap: 5px 10px;
-	margin: 10px 10px;
+	margin: 10px 10px; */
 }
 
 #links-other p {
