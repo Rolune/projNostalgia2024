@@ -38,6 +38,12 @@ header {
 
 /* login */
 
+#login-sect {
+	height: 400px;
+	width: 300px;
+	background-color: black;
+}
+
 /* !!header!! */
 
 main {
@@ -60,11 +66,7 @@ main {
 	background-color: maroon;
 }
 
-#login-sect {
-	height: 400px;
-	width: 300px;
-	background-color: black;
-}
+
 
 #nav-side {
 	width: 280px;
