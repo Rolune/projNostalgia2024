@@ -41,11 +41,11 @@
 				
 				background-color: hsl(0 0 40% / 40%);">
 					<p style="
-					grid-column: 1; grid-row: 1;
+					grid-column: 1 / span 1;
 					margin: auto 0;
 					padding: 0 5px;">contact</p>
 					<p style="
-					grid-column: 2/3; grid-row: 1;
+					grid-column: 2 / span 1;
 					margin: auto 0;
 					padding: 0 5px;">credit</p>
 				</div>
@@ -60,10 +60,25 @@
 		gap: 5px;
 		padding: 5px; margin: 5px;">
 			<div id="loginarea" style="
-			display: grid;
+			padding: 5px;
+			display: grid; gap: 5px;
+			grid-template-rows: 2.5em auto 3em;
 			background-color: white;">
-				<h4 style="background-color: gray;
-				margin:5px; padding: 2px;">Login</h4>
+				<div style="
+				display: grid;
+				grid-template-columns: 1em 1fr;
+				background-color: darkblue;">
+					<div style="display: inline;
+					margin: auto 0.5em;
+					background-color: lightblue;
+					border-radius: 0.325em;
+					width: 0.65em;
+					height: 1.4em;"></div>
+					<h4 style="
+					margin: auto 0.5em;
+					color: white;">Login Area</h4>
+				</div>
+				<div style="background-color: darkred;"></div>
 			</div>
 			<div id="startButton" style="
 			background-color: gray;"></div>
