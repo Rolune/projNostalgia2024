@@ -1,13 +1,18 @@
+/* use sparringly */
 * {
 	/* resetting */
 	margin: 0;
 	padding: 0;
+}
+html {
 	/* tmp font */
 	font-family: monospace;
 }
 
 body {
-	background-color: lightgray;
+	--bgCol1: hsl(0, 0%, 80%);
+	--bgCol2: hsl(from var(--bgCol1) h s calc(l - 20));
+	background: repeating-linear-gradient(45deg, var(--bgCol1), var(--bgCol2) 30px, var(--bgCol1) 60px);
 }
 
 /* utility class */
@@ -43,10 +48,11 @@ header {
 #login-sect {
 	height: 400px;
 	width: 300px;
-	background-color: black;
 }
 
 /* !!header!! */
+
+
 
 main {
 	display: flex;

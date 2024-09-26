@@ -58,12 +58,16 @@
 		display: grid;
 		grid-template-rows: auto 120px;
 		gap: 5px;
-		padding: 5px; margin: 5px;">
+		padding: 5px; margin: 10px;
+		background-color: white;
+		box-shadow: 0px 0px 0px 5px hsla(0 0% 0% / 20%);">
 			<div id="loginarea" style="
 			padding: 5px;
 			display: grid; gap: 5px;
 			grid-template-rows: 2.5em auto 3em;
-			background-color: white;">
+			--red1: brown;
+			--red2: hsl(from var(--red1) h s calc(l - 10));
+			background: repeating-linear-gradient(45deg, var(--red1), var(--red1) 5px, var(--red2) 5px, var(--red2) 10px);">
 				<div style="
 				display: grid;
 				grid-template-columns: 1em 1fr;
@@ -78,7 +82,17 @@
 					margin: auto 0.5em;
 					color: white;">Login Area</h4>
 				</div>
-				<div style="background-color: darkred;"></div>
+				<!-- would be form later -->
+				<div style="background-color: hsl(0, 0%, 80%);"></div>
+				<div style="
+				padding: 5px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5px;
+				background-color: darkblue;">
+					<div style="background-color: lightblue;">btn 1 area</div>
+					<div style="background-color: lightblue;">btn 2 area</div>
+				</div>
 			</div>
 			<div id="startButton" style="
 			background-color: gray;"></div>
