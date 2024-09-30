@@ -41,6 +41,15 @@ body {
 	background-color: hsl(0 0 40);
 }
 
+.bShadow {
+	box-shadow: 0px 0px 0px 5px hsla(0 0% 0% / 20%);
+}
+.bg-line {
+	--bgCol1: hsl(0 0 80 / 0.2);
+	--bgCol2: hsl{from var(var(--bgCol1)) h s calc(var(--bgCol1 - 40)) / 0.9};
+	background: repeating-linear-gradient(7deg, var(--bgCol1), var(--bgCol1) 5px, var(--bgCol2) 5px, var(--bgCol2) 10px);
+}
+
 .logo-sml-0 {
 	background-image: url("../media/squi_logo-000.png");
 	background-position: 68% 70%;
@@ -67,19 +76,67 @@ body {
 	height: 1.4em;
 }
 
+
 /* sections */
 
 /* header */
 
-/* main nav */
+/* nav bar area */
 #head-area {
 	display: flex;
 	flex-direction: column;
 }
 
+#nav-main {
+	background-color: hsl(0 0 40% / 40%);
+	margin: 10px 5px 0 10px;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#nav-main-upper {
+	/* to be removed */
+	background-color: hsl(0 0 50% / 25%);
+}
+
+#logo {
+	background-color: hsl(197, 48%, 72%);
+	box-sizing: border-box;
+	
+	margin: 0 5px 5px;
+	border: 3px solid #1E4C5B;
+
+	height: 50px;
+	width: 50px;
+}
+
+#nav-extra-upper {
+	display: grid;
+	grid-template-columns: repeat(2 1fr);
+	gap: 5px 10px;
+
+	padding: 0 10px;
+	background-color: hsl(0 0 40% / 40%);
+}
+
+#nav-main-bar {
+	width: 100%; height: 60px;
+	border-radius: 5px;
+	background-color: hsla(0, 60%, 60%, 0.3);
+}
+/* !!nav bar area!! */
+
+
 /* login */
 
 #login-sect {
+	display: grid;
+	grid-template-rows: auto 120px;
+	gap: 5px;
+
+	margin: 10px;
+	padding: 3px; 
+
 	height: 400px;
 	width: 300px;
 }
@@ -100,38 +157,3 @@ body {
 
 /* id planned for removal */
 
-#nav-area {
-	width: 100%;
-	/* height: 100px; */
-	background-color: red;
-}
-
-#nav-main {
-	background-color: hsl(0 0 40% / 40%);
-}
-
-#nav-main-upper {
-	background-color: hsl(0 0 50% / 25%);
-}
-
-#logo {
-	background-color: #94C5D9;
-	box-sizing: border-box;
-	height: 40px;
-	width: 40px;
-	border: 3px solid #1E4C5B;
-}
-
-#nav-extra-upper {
-	display: grid;
-	grid-template-columns: repeat(2 1fr);
-	gap: 5px 10px;
-
-	padding: 0 10px;
-	background-color: hsl(0 0 40% / 40%);
-}
-
-#nav-main-bar {
-	width: 100%; height: 60px;
-	background-color: hsla(0, 60%, 60%, 0.3);
-}
