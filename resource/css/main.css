@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	--bgCol1: hsl(0, 0%, 80%);
+	--bgCol1: hsl(120 20 80);
 	--bgCol2: hsl(from var(--bgCol1) h s calc(l - 20));
 	background: repeating-linear-gradient(45deg, var(--bgCol1), var(--bgCol2) 30px, var(--bgCol1) 60px);
 }
@@ -26,20 +26,24 @@ body {
 }
 
 .gray0 {
-	background-color: hsl(0, 0%, 100%);
+	background-color: hsl(0 0 60);
 }
 
 .gray1 {
 	background-color: hsl(0 0 40);
 }
 
+.capsule-thin {
+	display: inline;
+	margin: auto 0.5em;
+	border-radius: 0.25em;
+	width: 0.5em;
+	height: 1.4em;
+}
+
 /* sections */
 
 /* header */
-header {
-	width: 100%;
-	display: flex;
-}
 
 /* main nav */
 
@@ -51,12 +55,18 @@ header {
 }
 
 /* !!header!! */
+/* main */
 
-
-
-main {
-	display: flex;
+/* test class */
+.contentList {
+	width: 50%;
+	min-width: 400px;
+	height: 200px;
+	margin: 0 auto;
 }
+
+/* !!main!! */
+
 
 /* id planned for removal */
 
@@ -72,10 +82,6 @@ main {
 	/* would need to remove the width 100 later when I make it responsive */
 	width: 100%;
 	background-color: maroon;
-}
-
-#nav-side {
-	width: 280px;
 }
 
 #links-other {

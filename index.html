@@ -7,8 +7,13 @@
 	<!-- main css -->
 	<link rel="stylesheet" href="resource/css/main.css">
 </head>
-<body>
-	<header style="align-items: flex-start;">
+<body style="
+max-width: 1600px;
+margin: 0 auto;">
+	<header style="
+	display: grid;
+	grid-template-columns: auto 300px;
+	grid-template-rows: 100px auto;">
 		<!-- dividing to put the open section under nav -->
 		<nav id="nav-main" style="
 		flex: 1;
@@ -17,7 +22,6 @@
 			display: flex; 
 			justify-content: space-between;
 			background-color: hsl(0 0 50% / 25%);">
-				<!-- swap with img later -->
 				<div id="logo" style="
 				background-color: #94C5D9;
 				
@@ -55,6 +59,7 @@
 		</nav>
 		<!-- "login" window -->
 		<section id="login-sect" style="
+		grid:1/3;
 		display: grid;
 		grid-template-rows: auto 120px;
 		gap: 5px;
@@ -69,17 +74,12 @@
 			--red2: hsl(from var(--red1) h s calc(l - 10));
 			background: repeating-linear-gradient(45deg, var(--red1), var(--red1) 5px, var(--red2) 5px, var(--red2) 10px);">
 				<div style="
-				display: grid;
-				grid-template-columns: 1em 1fr;
+				display: flex;
 				background-color: darkblue;">
-					<div style="display: inline;
-					margin: auto 0.5em;
-					background-color: lightblue;
-					border-radius: 0.325em;
-					width: 0.65em;
-					height: 1.4em;"></div>
+					<div class="capsule-thin" style="
+					background-color: lightblue;"></div>
 					<h4 style="
-					margin: auto 0.5em;
+					margin: auto 0;
 					color: white;">Login Area</h4>
 				</div>
 				<!-- would be form later -->
@@ -97,12 +97,54 @@
 			<div id="startButton" style="
 			background-color: gray;"></div>
 		</section>
+		<div style="
+		width: 100%;
+		height: 200px;">test space for side bar</div>
 	</header>
-	<main>
+	<main style="
+	background: hsl(0 0 100);
+	border-radius: 20px;
+	margin: 0 20px 0 20px;
+	display: grid;
+	grid-template-columns: auto 3px 320px;">
 		<!-- this might work better as a grid -->
-		<section id="sect-main" class="flex-fill gray1">main section</section>
-		<nav id="nav-side" class="gray0">bwah</nav>
+		<section id="sect-main" class="gray1" style="
+		display: flex;
+		flex-wrap: wrap;
+		margin: 20px 5px 5px 5px;">
+			<div class="contentList" style="
+			background: lightcoral;">panel 1</div>
+			<div class="contentList" style="
+			background: orange;">panel 2</div>
+			<div id="scrollingContent" style="
+			width: 100%;
+			min-width: 500px;
+			height: 200px;
+			background: yellow;">Scrolling Stuff</div>
+			<div class="contentList" style="
+			background: lightcyan;">panel 3</div>
+			<div class="contentList" style="
+			background: lightcoral;">panel 4</div>
+			<div style="
+			width: 100%;
+			height: 1000px;
+			text-align: center;">Area left to increase scroll size</div>
+		</section>
+		<div id="dividingLine" style="
+		background: lightblue;
+		width: 100%;"></div>
+		<nav id="nav-side" class="gray0" style="margin: 20px 5px;">
+			<div style="
+			position:sticky;
+			top: calc(50% - 250px);
+			height: 500px;
+			width: 310px;
+			background: red;">
+				<h3>Side Bar</h3>
+				this area should follow until it hits it's edge & stay
+			</div>
+		</nav>
 	</main>
-	<footer></footer>
+	<footer style="height: 500px;"></footer>
 </body>
 </html>
