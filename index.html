@@ -9,48 +9,37 @@
 	<link rel="stylesheet" href="resource/css/main.css">
 </head>
 
-<body style="
-max-width: 1600px;
-margin: 0 auto;">
-	<header class="flex-wrap">
-		<!-- dividing to put the open section under nav -->
-		<div id="head-area" style="flex: 1;">
-			<nav id="nav-main" class="bShadow bg-line" style="flex: 0;">
-				<div id="nav-main-upper" class="flex-between" style="flex: 1;">
-					<div id="logo" class="logo-sml-0">
-						<!-- tmp colour picked on blender -->
-					</div>
-					<!-- extra links -->
-					<div id="nav-extra-upper">
-						<!-- should be changed to a tag later -->
-						<p style="
-						grid-column: 1 / span 1;
-						margin: auto 0;
-						padding: 0 5px;">contact</p>
-						<p style="
-						grid-column: 2 / span 1;
-						margin: auto 0;
-						padding: 0 5px;">credit</p>
-					</div>
+<body>
+	<header>
+		<nav id="nav-main" class="bg-stripe border-shadow">
+			<div id="nav-main-upper" class="flex-between">
+				<div id="logo" class="logo-sml-0">
+					<!-- tmp colour picked on blender -->
 				</div>
-				<div id="nav-main-bar"></div>
-			</nav>
-			<div style="flex: 1; text-align: center;">free area</div>
+				<!-- extra links -->
+				<div id="nav-extra-upper">
+					<!-- should be changed to a tag later -->
+					<p>contact</p>
+					<p>credit</p>
+				</div>
+			</div>
+			<div id="nav-main-bar"></div>
+		</nav>
+		<div id="header-free">free area 🐛
+			<div class="test-colPal">
+				<div class="test-col-2"></div>
+				<div class="test-col-0"></div>
+				<div class="test-col-1"></div>
+			</div>
 		</div>
-
 		<!-- "login" window -->
 		<section id="login-sect" class="bShadow" style="
-		
-		
 		background-color: white;
 		">
-			<div id="loginarea" style="
+			<div id="login-area" class="bg-stripe" style="
 			padding: 5px;
 			display: grid; gap: 5px;
-			grid-template-rows: 2.5em auto 3em;
-			--red1: brown;
-			--red2: hsl(from var(--red1) h s calc(l - 10));
-			background: repeating-linear-gradient(45deg, var(--red1), var(--red1) 5px, var(--red2) 5px, var(--red2) 10px);">
+			grid-template-rows: 2.5em auto 3em;">
 				<div style="
 				display: flex;
 				background-color: darkblue;">
@@ -75,16 +64,12 @@ margin: 0 auto;">
 			<div id="startButton" style="
 			background-color: gray;"></div>
 		</section>
-		<div style="
-		width: 100%;
-		height: 200px;">test space for side bar</div>
 	</header>
 	<main style="
 	background: hsl(0 0 100);
 	border-radius: 20px;
-	margin: 0 20px 0 20px;
 	display: grid;
-	grid-template-columns: auto 3px 320px;">
+	grid-template-columns: 1fr 3px auto;">
 		<!-- this might work better as a grid -->
 		<section id="sect-main" class="gray1" style="
 		display: flex;
@@ -116,14 +101,15 @@ margin: 0 auto;">
 			position:sticky;
 			top: calc(50% - 250px);
 			height: 500px;
-			width: 310px;
+			width: 200px;
+			max-width: 300px;
 			background: red;">
 				<h3>Side Bar</h3>
-				this area should follow until it hits it's edge & stay
+				<p>this area should follow until it hits it's edge & stay</p>
 			</div>
 		</nav>
 	</main>
-	<footer style="height: 500px;"></footer>
+	<footer style="height: 200px;"></footer>
 </body>
 
 </html>
